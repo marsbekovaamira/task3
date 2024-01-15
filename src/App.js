@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Task1 from "./components/Task1";
+import Boxes from "./components/Boxes";
+import Card from "./components/Card";
+import Avatar from "./components/Avatar";
 
-function App() {
+const App = () => {
+  let stylesArr = [
+    { width: "300px", height: "150px", backgroundColor: "red" },
+    { width: "300px", height: "150px", backgroundColor: "blue" },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Boxes stylesArr={stylesArr} />
+      <Task1 />
+      <Card>
+        <Avatar
+          src="https://i.pinimg.com/236x/82/32/ef/8232eff2ddf8af44d96c2b1b45d28956.jpg"
+          alt=""
+        />
+      </Card>
     </div>
   );
-}
+};
 
 export default App;
+// !---------- извините за ссылку)))----------------------
